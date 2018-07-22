@@ -1,0 +1,16 @@
+/* your styles go here */
+.modal-dialog {
+	margin: 100px auto;
+}
+
+.userRow-selected {
+	color: #fff !important;
+	background-color: #449d44 !important;
+	border-color: #419641 !important;
+}
+
+/*.userRow-selected:hover {
+	color: #fff;
+	background-color: #449d44;
+	border-color: #419641;
+}*/

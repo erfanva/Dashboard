@@ -1,0 +1,98 @@
+[{
+        "uid" : "gg-08",
+        "phone" : "77556699",
+        "country" : "Iran",
+        "city" : "Tabriz",
+        "postalCode" : "8855223366"
+    }, {
+        "uid" : "gg-12",
+        "phone" : "88553322",
+        "country" : "Iran",
+        "city" : "Mashhad",
+        "postalCode" : "9987564123"
+    }, {
+        "uid" : "gg-44",
+        "phone" : "88662277",
+        "country" : "Iran",
+        "city" : "Arak",
+        "postalCode" : "3399882277"
+    }, {
+        "uid" : "gg-99",
+        "phone" : "99885522",
+        "country" : "Iran",
+        "city" : "Tehran",
+        "postalCode" : "1234567890"
+    },{
+        "uid" : "gg-01",
+        "phone" : "77556677",
+        "country" : "Iran",
+        "city" : "Qom",
+        "postalCode" : "8855223366"
+    }, {
+        "uid" : "gg-02",
+        "phone" : "44553322",
+        "country" : "Iran",
+        "city" : "Shiraz",
+        "postalCode" : "9987564123"
+    }, {
+        "uid" : "gg-03",
+        "phone" : "33662277",
+        "country" : "Iran",
+        "city" : "Kerman",
+        "postalCode" : "3399882277"
+    }, {
+        "uid" : "gg-04",
+        "phone" : "22885522",
+        "country" : "Iran",
+        "city" : "Kermanshah",
+        "postalCode" : "1234567890"
+    }, {
+        "uid" : "gg-05",
+        "phone" : "33556699",
+        "country" : "Iran",
+        "city" : "Yazd",
+        "postalCode" : "8855223366"
+    }, {
+        "uid" : "gg-06",
+        "phone" : "77553322",
+        "country" : "Iran",
+        "city" : "Esfehan",
+        "postalCode" : "9987564123"
+    }, {
+        "uid" : "gg-07",
+        "phone" : "22662277",
+        "country" : "Iran",
+        "city" : "Khoramshahr",
+        "postalCode" : "3399882277"
+    }, {
+        "uid" : "gg-08",
+        "phone" : "66885522",
+        "country" : "Iran",
+        "city" : "Abadan",
+        "postalCode" : "1234567890"
+    },{
+        "uid" : "gg-09",
+        "phone" : "55436699",
+        "country" : "Iran",
+        "city" : "Rasht",
+        "postalCode" : "8855223366"
+    }, {
+        "uid" : "gg-10",
+        "phone" : "33224466",
+        "country" : "Iran",
+        "city" : "Neishaboor",
+        "postalCode" : "9987564123"
+    }, {
+        "uid" : "gg-11",
+        "phone" : "33435675",
+        "country" : "Iran",
+        "city" : "Kazeroon",
+        "postalCode" : "3399882277"
+    }, {
+        "uid" : "gg-13",
+        "phone" : "66462676",
+        "country" : "Iran",
+        "city" : "Kish",
+        "postalCode" : "1234567890"
+    }
+]

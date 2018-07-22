@@ -1,0 +1,103 @@
+<div class="card">
+    <div class="card-close">
+        <div class="dropdown">
+            <button type="button" id="closeCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow">
+                <a class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a>
+                <a class="dropdown-item edit" data-toggle="modal" data-target="#modalAdd" ng-click="openModalAdd()"> <i class="fa fa-plus"></i>Add</a>
+            </div> 
+        </div>
+    </div>
+    <div class="card-header d-flex align-items-center">
+        <h3 class="h4">Users</h3>              
+
+        <div class="d-flex" style="margin: auto; margin-right: 30px; float:right;">
+           <!--  <input ng-model="filterVal" type="text" placeholder="Search..." class="form-control" style="width: 69%;">
+            <select ng-model="filterKey" ng-click="log(filterKey)" style="width: 29%;"class="form-control">
+                <option value="*">All</option>
+                <option ng-repeat="(key, val) in users[0]" value="{{key}}">{{key}}</option>
+            </select> -->
+            <angucomplete 
+                        id="ex2" 
+                        placeholder="Search..." 
+                        pause="300" 
+                        selectedobject="selectedPerson" 
+                        localdata="users" 
+                        searchfields="firstName,lastName" 
+                        titlefield="firstName,lastName" 
+                        descriptionfield="uid" 
+                        minlength="3" 
+                        inputclass="form-control form-control-small" 
+                        matchclass="highlight" />
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table id="usersTable" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <style type="text/css">
+                            th { cursor: pointer; }
+                            th:hover > span { opacity: 0.4; }
+                            th { padding-right: 10px; !important }
+                        </style>
+                        <th ng-repeat="(key, val) in users[0]" ng-click="orderByMe(key)">
+                            {{key}}
+                            <i  class="fa"
+                                ng-show="sortBy==='{{key}}'" 
+                                ng-class="{'fa-sort-up':reverse,'fa-sort-down':!reverse}"></i>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr context-menu="rowContextMenu"
+                        model="users.indexOf(item)"
+                        ng-repeat=" item in users | 
+                                    orderBy: sortBy: reverse |
+                                    limitTo : maxUsersInPage : maxUsersInPage*tablePage | 
+                                    filter : getFilter()"
+                        ng-click="editThisRow(item)"
+                        class="userRow" 
+                        ng-class="{'userRow-selected':editingIndex === users.indexOf(item)}"> 
+
+                        <td ng-repeat="(key, val) in item" class="{{key}}" title="{{key}}">{{val}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="card-footer text-center">
+        <style>
+            .btn-page {margin-right: 3px;}
+        </style>
+        <button type="button" class="btn btn-default btn-page" 
+                ng-click="changeTablePage(0)"
+                ng-disabled="tablePage <= 0"
+                ng-if="tableMaxPage>2"
+                ><<</button>
+        <button type="button" class="btn btn-default btn-page" 
+                ng-click="changeTablePage(tablePage-1)"
+                ng-disabled="tablePage <= 0"
+                ><</button>
+
+        <button type="button" class="btn btn-default btn-page" 
+                ng-repeat="i in range(tableMaxPage) | limitTo : maxPageButtons : tablePage"
+                ng-click="changeTablePage(i)"
+                ng-class="{'btn-success':tablePage === i}">{{i+1}}</button>
+
+        <button type="button" class="btn btn-default btn-page" 
+                ng-click="changeTablePage(tablePage+maxPageButtons)"
+                ng-if="tableMaxPage > maxPageButtons"
+                >...</button>
+
+        <button type="button" class="btn btn-default btn-page" 
+                ng-click="changeTablePage(tablePage+1)"
+                ng-disabled="tablePage == tableMaxPage-1"
+                >></button>
+        <button type="button" class="btn btn-default btn-page" 
+                ng-click="changeTablePage(tableMaxPage-1)"
+                ng-disabled="tablePage == tableMaxPage-1"
+                ng-if="tableMaxPage>2"
+                >>></button>
+    </div>
+</div>
